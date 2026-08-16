@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#073f39">
+<title>Kopi Sukun — Menu</title>
+<style>
+:root{--bg:#073f39;--lime:#c5e92d;--cream:#fbfaf4;--teal:#0b6860;--ink:#0d5953;--muted:#73807a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#fff;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif}button,input,select{font:inherit}a{text-decoration:none;color:inherit}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.06;background-image:radial-gradient(#fff .6px,transparent .6px);background-size:5px 5px}
+.splash{position:fixed;inset:0;z-index:999;background:var(--bg);display:grid;place-items:center;animation:fade .55s ease 1s forwards}.splash img{width:150px;filter:brightness(0) invert(1)}@keyframes fade{to{opacity:0;visibility:hidden}}
+.header{position:sticky;top:0;z-index:20;background:rgba(7,63,57,.97);border-bottom:1px solid #ffffff12;backdrop-filter:blur(14px)}
+.nav{height:62px;max-width:860px;width:calc(100% - 28px);margin:auto;display:flex;align-items:center;justify-content:space-between}.logo img{width:118px;height:42px;object-fit:contain;filter:brightness(0) invert(1)}.nav a,.admin{border:0;background:transparent;color:#fff;padding:8px 10px;border-radius:999px;font-size:11px;font-weight:700}.nav a:hover,.admin:hover{background:#ffffff10}
+.hero{max-width:860px;width:calc(100% - 28px);margin:auto;padding:28px 0 22px;display:flex;justify-content:space-between;align-items:end;gap:20px}.hero-kicker{color:var(--lime);font-weight:800;letter-spacing:1.8px;font-size:9px}.hero h1{font-family:Georgia,serif;font-size:clamp(34px,5vw,54px);font-weight:400;line-height:1;letter-spacing:-2.5px;margin:7px 0}.hero p{max-width:500px;color:#ffffffa8;font-family:Georgia,serif;font-size:12px;line-height:1.55;margin:0}.hours{border:1px solid #ffffff18;background:#ffffff08;border-radius:999px;padding:9px 12px;font-size:10px;white-space:nowrap}.hours b{color:var(--lime)}
+.main{max-width:860px;width:calc(100% - 28px);margin:auto;padding-bottom:55px}.section{padding:10px 0}.category-btn{width:100%;border:1px solid #ffffff18;background:#ffffff08;color:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-align:left;cursor:pointer}.category-btn:hover{background:#ffffff0e}.category-icon{width:28px;height:28px;border-radius:8px;background:#ffffff0d;display:grid;place-items:center;color:var(--lime);flex:none}.category-icon svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.category-title{font-size:13px;font-weight:750;flex:1}.category-count{font-size:9px;color:#ffffff70}.chevron{font-size:13px;color:#ffffff70;transition:transform .2s}.category-btn.open .chevron{transform:rotate(180deg)}
+.cards{display:none;margin:4px 0 8px;border-left:1px solid #ffffff12}.cards.open{display:block}.card{background:var(--cream);color:var(--ink);padding:9px 10px 9px 11px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #dfe5df;cursor:pointer;min-height:54px}.card:first-child{border-radius:0 10px 0 0}.card:last-child{border-radius:0 0 10px 0;border-bottom:0}.card:hover{background:#f3f5ee}.menu-icon{width:28px;height:28px;min-width:28px;border-radius:8px;background:#e8eee4;display:grid;place-items:center;color:var(--teal)}.menu-icon svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}.content{min-width:0;flex:1}.flat,.type{display:none}.name{font-size:12px;font-weight:700;line-height:1.25}.desc{font-family:Georgia,serif;font-size:9px;line-height:1.35;color:#7a8580;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.bottom{margin-left:auto}.price{font-size:11px;font-weight:750;white-space:nowrap;color:var(--ink)}
+.info{border-top:1px solid #ffffff14;margin-top:20px;padding-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px}.info-card{background:#ffffff08;border:1px solid #ffffff12;border-radius:14px;padding:15px}.info-card h3{font-family:Georgia,serif;font-size:20px;font-weight:400;margin:0 0 5px}.info-card p{font-family:Georgia,serif;color:#ffffff91;font-size:10px;line-height:1.6;margin:0}.map{display:inline-block;margin-top:10px;background:var(--lime);color:var(--ink);padding:8px 11px;border-radius:999px;font-size:10px;font-weight:800}.insta{color:var(--lime);font-size:10px;font-weight:800}
+footer{border-top:1px solid #ffffff12;padding:20px 0 28px}.foot{max-width:860px;width:calc(100% - 28px);margin:auto;display:flex;justify-content:space-between;align-items:center}.foot b{font-family:Georgia,serif;font-size:16px;font-weight:400}.foot small{color:#ffffff70;font-size:9px;line-height:1.8}.foot small a{color:var(--lime)}.foot>a{border:1px solid #ffffff20;padding:8px 11px;border-radius:999px;font-size:9px}
+.detail-modal{display:none;position:fixed;inset:0;z-index:90;background:#001f1ccc;backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:14px}.detail-modal.open{display:flex}.detail-panel{width:min(360px,100%);background:var(--cream);color:var(--ink);border-radius:18px;padding:13px;box-shadow:0 25px 70px #001f1c66}.detail-icon{height:72px;border-radius:12px;background:#e8eee4;display:grid;place-items:center;color:var(--teal)}.detail-icon svg{width:34px;height:34px;stroke:currentColor;fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}.detail-close{position:absolute;right:22px;top:22px;border:0;background:#ffffffdd;color:var(--ink);width:32px;height:32px;border-radius:50%;font-size:18px}.detail-body{padding:12px 3px 3px}.detail-cat{font-size:8px;color:#8c721f;text-transform:uppercase;letter-spacing:1.4px;font-weight:900}.detail-title{font-family:Georgia,serif;font-size:24px;font-weight:400;line-height:1.08;margin:5px 0 7px}.detail-copy{font-family:Georgia,serif;font-size:11px;line-height:1.65;color:#65736e;margin:0 0 12px}.detail-price{display:inline-block;background:var(--teal);color:var(--lime);padding:7px 11px;border-radius:999px;font-size:11px;font-weight:900}
+.modal{display:none;position:fixed;inset:0;z-index:100;background:#001f1ccc;backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:15px}.modal.open{display:flex}.panel{width:min(440px,100%);max-height:90vh;overflow:auto;background:#f7f5ec;color:var(--ink);border-radius:18px;padding:18px}.close{float:right;border:0;background:#e4e9df;color:var(--ink);width:32px;height:32px;border-radius:50%}.panel h2{font-family:Georgia,serif;font-size:26px;font-weight:400;margin:0 0 3px}.sub{font-size:10px;color:#78837e;margin:0 0 15px}.field{width:100%;padding:10px;border:1px solid #0d59531d;border-radius:9px;background:#fff;margin:4px 0 10px;outline:none}.primary,.lime-btn{width:100%;padding:11px;border:0;border-radius:10px;font-weight:800}.primary{background:var(--ink);color:#fff}.lime-btn{background:var(--lime);color:var(--ink)}.admin-row{display:flex;justify-content:space-between;align-items:center;background:#fff;padding:9px 10px;border-radius:10px;margin-top:6px;font-size:11px}.delete{border:0;background:none;color:#9b4d4d;font-size:9px}
+@media(max-width:600px){.nav{height:58px}.logo img{width:108px}.nav a{display:none}.hero{display:block;padding:23px 0 16px}.hero h1{font-size:39px}.hero p{font-size:11px}.hours{display:inline-block;margin-top:12px}.main{width:calc(100% - 22px)}.info{grid-template-columns:1fr}.foot{align-items:flex-start;gap:12px;flex-direction:column}}
+
+/* Final mobile-safe branding */
+.brand-logo{display:flex;justify-content:center;align-items:center;width:100%;margin:0 auto}
+.brand-logo img{display:block;max-width:min(180px,58vw);height:auto;margin:0 auto}
+@media (max-width:600px){
+  .brand-logo img{max-width:150px}
+}
+
+/* Single compact footer */
+footer{display:block!important}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:14px;max-width:720px;margin:0 auto}
+.foot a{white-space:nowrap}
+@media (max-width:600px){
+  .foot{flex-direction:column;text-align:center;gap:8px}
+}
+
+
+.logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center}
+.logo img{width:118px;height:42px;object-fit:contain;filter:brightness(0) invert(1);display:block}
+.desktop-nav{margin-left:auto;display:flex;align-items:center;gap:2px}
+.more-btn{display:none;border:0;background:transparent;color:#fff;width:42px;height:42px;border-radius:50%;font-size:17px;letter-spacing:2px;line-height:1;cursor:pointer;align-items:center;justify-content:center}
+.more-btn:hover{background:#ffffff10}
+.more-menu{display:none;position:absolute;right:0;top:54px;min-width:130px;padding:6px;background:#0b514b;border:1px solid #ffffff18;border-radius:12px;box-shadow:0 15px 35px #001f1c66}
+.more-menu.open{display:flex;flex-direction:column}
+.more-menu a,.more-menu button{border:0;background:transparent;color:#fff;text-align:left;padding:10px 12px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer}
+.more-menu a:hover,.more-menu button:hover{background:#ffffff10}
+.nav{position:relative}
+@media(max-width:600px){
+ .nav{height:60px;width:calc(100% - 18px);justify-content:center}
+ .desktop-nav{display:none}
+ .more-btn{display:flex;position:absolute;right:0;top:9px}
+ .logo img{width:126px;height:44px;max-width:55vw}
+ .logo{position:absolute}
+}
+
+/* v7 mobile optimization */
+html{overflow-x:hidden}
+body{overflow-x:hidden;-webkit-text-size-adjust:100%;padding-bottom:env(safe-area-inset-bottom)}
+.header{position:sticky;top:0;z-index:80;background:rgba(7,63,57,.96);backdrop-filter:blur(14px);padding-top:env(safe-area-inset-top)}
+.nav{height:64px;width:min(920px,calc(100% - 24px));margin:auto;position:relative}
+.logo{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:auto!important;height:50px;display:flex!important;align-items:center;justify-content:center;z-index:4}
+.logo img{width:auto!important;height:46px!important;max-width:52vw;object-fit:contain;display:block}
+.more-btn{z-index:5;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.more-menu{z-index:90;right:0;top:58px;max-width:calc(100vw - 24px)}
+.card{min-height:58px;padding:9px 9px 9px 10px}
+.menu-icon{width:30px;height:30px;min-width:30px}
+.name{font-size:12px}
+.desc{font-size:9px;max-width:48vw}
+.price{font-size:10px}
+.detail-panel,.panel{max-height:calc(100dvh - 28px);overflow:auto}
+@media(max-width:600px){
+ .nav{height:62px;width:calc(100% - 16px)}
+ .logo img{height:43px!important;max-width:46vw}
+ .more-btn{right:0;top:10px;width:40px;height:40px}
+ .hero{padding:20px 0 15px}
+ .hero h1{font-size:clamp(34px,11vw,42px);line-height:.98}
+ .hero p{font-size:11px;line-height:1.65;max-width:42ch}
+ .main{width:calc(100% - 18px)}
+ .section-title{font-size:18px}
+ .cards{border-radius:11px}
+ .card{gap:8px}
+ .content{min-width:0}
+ .desc{max-width:44vw}
+ .bottom{padding-left:4px}
+ .detail-modal,.modal{padding:10px}
+ .detail-panel,.panel{width:100%;border-radius:16px}
+ .detail-title{font-size:22px}
+ .info{grid-template-columns:1fr}
+ footer{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+ .foot{width:calc(100% - 24px);text-align:center;align-items:center}
+}
+@media(max-width:360px){
+ .logo img{max-width:42vw}
+ .more-btn{width:36px}
+ .card{padding-left:7px;padding-right:7px}
+ .menu-icon{width:28px;height:28px;min-width:28px}
+ .name{font-size:11px}
+ .price{font-size:9px}
+ .desc{display:none}
+}
+
+</style>
+</head>
+<body>
+<div class="splash"><img src="assets/kopi-sukun-logo.png" alt="Kopi Sukun"></div>
+<header class="header">
+<div class="nav">
+  <a class="logo" href="#top"><img src="assets/kopi-sukun-logo.png" alt="Kopi Sukun"></a>
+  <div class="desktop-nav"><a href="#menu">Menu</a><a href="#info">Info</a><button class="admin" onclick="openAdmin()">Admin</button></div>
+  <button class="more-btn" aria-label="Buka menu" onclick="toggleMore()">•••</button>
+  <div class="more-menu" id="moreMenu">
+    <a href="#menu" onclick="closeMore()">Menu</a>
+    <a href="#info" onclick="closeMore()">Info</a>
+    <button onclick="closeMore();openAdmin()">Admin</button>
+  </div>
+</div>
+</header>
+<section class="hero" id="top"><div><div class="hero-kicker">RUANG JEDA KITA</div><h1>Secangkir<br>untuk jeda.</h1><p>Tak semua hari harus dijalani terburu-buru. Singgah sebentar, pilih secangkir yang kamu suka, dan biarkan waktu berjalan sedikit lebih pelan.</p></div><div class="hours"><b>16.00</b> — <b>24.00 WIB</b></div></section>
+<main class="main" id="menu"><div id="sections"></div>
+
+</main>
+
+
+
+<div class="detail-modal" id="detailModal" onclick="if(event.target===this)closeDetail()">
+<button class="detail-close" onclick="closeDetail()">×</button>
+<div class="detail-panel">
+  <div class="detail-icon" id="detailIcon"></div>
+  <div class="detail-body">
+    <div class="detail-cat" id="detailCat"></div>
+    <div class="detail-title" id="detailTitle"></div>
+    <p class="detail-copy" id="detailCopy"></p>
+    <span class="detail-price" id="detailPrice"></span>
+  </div>
+</div>
+</div>
+
+<div class="modal" id="adminModal" onclick="if(event.target===this)closeAdmin()"><div class="panel"><button class="close" onclick="closeAdmin()">×</button>
+<div id="loginView"><h2>Admin</h2><p class="sub">Kelola nama menu, kategori, dan harga.</p><label>Username</label><input class="field" id="u" value="user"><label>Password</label><input class="field" id="p" type="password"><button class="primary" onclick="login()">Masuk</button><p id="err" style="display:none;color:#9b4d4d;font-size:11px">Username atau password salah.</p></div>
+<div id="adminView" style="display:none"><h2>Kelola Menu</h2><p class="sub">Mode lokal: perubahan hanya tersimpan di browser ini. Untuk update GitHub Pages yang aman, gunakan backend/API.</p><label>Nama menu</label><input class="field" id="n" placeholder="Contoh: Kopi Susu Tubruk"><label>Kategori</label><select class="field" id="c"><option value="coffee">Coffee</option><option value="noncoffee">Non-Coffee</option><option value="food">Food</option></select><label>Harga</label><input class="field" id="pr" type="number" placeholder="15000"><button class="lime-btn" onclick="addMenu()">Tambah menu</button><div id="adminList" style="margin-top:14px"></div><button class="primary" style="margin-top:9px;background:#e7ebe5;color:var(--ink)" onclick="logout()">Keluar</button></div>
+</div></div>
+<script>
+const defaults=[
+["Kopi Tubruk",6000,"coffee"],["Kopi Susu Tubruk",8000,"coffee"],["Icepresso Robusta",10000,"coffee"],["Icepresso Arabica",12000,"coffee"],["Long Black Robusta (Hot/Ice)",10000,"coffee"],["Long Black Arabica (Hot/Ice)",12000,"coffee"],["Cappuccino (Hot/Ice)",16000,"coffee"],["Manual Brew V60 – Houseblend",15000,"coffee"],["Manual Brew V60 – Arabica",17000,"coffee"],["Manual Brew V60 – Arabica Banana",18000,"coffee"],
+["Joshua",8000,"noncoffee"],["Nutrisari",8000,"noncoffee"],["Fresh Milk",10000,"noncoffee"],["Cokelat",12000,"noncoffee"],["Teh",5000,"noncoffee"],
+["Indomie",8000,"food"],["Indomie Plus Telur",10000,"food"]
+].map(x=>({name:x[0],price:x[1],cat:x[2]}));
+let custom=JSON.parse(localStorage.getItem("kopiSukunMenu")||"[]"),menu=[...defaults,...custom];
+const cats=[["coffee","Coffee","Aroma hangat, rasa yang tinggal lebih lama."],["noncoffee","Non-Coffee","Segar, ringan, dan menyenangkan."],["food","Food","Teman sederhana untuk obrolan yang panjang."]];
+function money(n){return"Rp"+n.toLocaleString("id-ID")}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function desc(name,cat){
+const d={
+"Kopi Tubruk":"Seduhan kopi yang pekat dan hangat, dengan rasa yang tegas dan aroma yang akrab.",
+"Kopi Susu Tubruk":"Kopi yang dipeluk lembut oleh susu—manis, creamy, dan pas untuk menemani jeda.",
+"Icepresso Robusta":"Espresso robusta yang dingin dan berkarakter, dengan rasa kuat yang menyegarkan.",
+"Icepresso Arabica":"Espresso arabica yang dingin, harum, dan ringan—segar tanpa kehilangan kedalaman rasa.",
+"Long Black Robusta (Hot/Ice)":"Kopi robusta dengan karakter tegas dan akhir rasa yang panjang, tersedia hangat atau dingin.",
+"Long Black Arabica (Hot/Ice)":"Arabica yang jernih dan aromatik, dengan rasa ringan yang elegan untuk dinikmati perlahan.",
+"Cappuccino (Hot/Ice)":"Perpaduan espresso dan susu lembut dengan rasa seimbang—hangat, creamy, dan menenangkan.",
+"Manual Brew V60 – Houseblend":"Diseduh perlahan untuk menjaga aroma dan karakter houseblend tetap jernih di setiap tegukan.",
+"Manual Brew V60 – Arabica":"Arabica yang diseduh perlahan, menghadirkan aroma wangi dan rasa berlapis yang nyaman dinikmati.",
+"Manual Brew V60 – Arabica Banana":"Arabica dengan nuansa manis dan sentuhan fruity yang unik, lembut namun tetap berkarakter.",
+"Joshua":"Minuman segar dengan rasa ringan dan ceria—teman kecil untuk melepas penat.",
+"Nutrisari":"Segar, manis, dan ringan; pilihan sederhana untuk menyegarkan suasana.",
+"Fresh Milk":"Susu segar yang lembut dan creamy, sederhana namun nyaman di setiap tegukan.",
+"Cokelat":"Cokelat yang manis dan pekat dengan rasa lembut yang terasa seperti pelukan kecil.",
+"Teh":"Seduhan teh yang ringan dan menenangkan, cocok untuk menemani obrolan tanpa tergesa.",
+"Indomie":"Mie hangat yang gurih dan akrab—sederhana, mengenyangkan, dan selalu terasa familiar.",
+"Indomie Plus Telur":"Indomie gurih dengan tambahan telur, lebih lengkap untuk mengisi jeda dan perut yang lapar."
+};
+return d[name]||(cat==="coffee"?"Secangkir kopi untuk menemani cerita, percakapan, dan waktu yang berjalan perlahan.":cat==="noncoffee"?"Rasa segar dan ringan untuk menemani sore hingga malam.":"Hidangan sederhana yang pas untuk menemani kopi dan obrolan.");
+}
+function teaser(name,cat){
+const t={
+"Kopi Tubruk":"Pekat, hangat, dan berkarakter.",
+"Kopi Susu Tubruk":"Lembut, manis, dan creamy.",
+"Icepresso Robusta":"Dingin, kuat, dan menyegarkan.",
+"Icepresso Arabica":"Harum, ringan, dan segar.",
+"Long Black Robusta (Hot/Ice)":"Tegas dengan akhir rasa yang panjang.",
+"Long Black Arabica (Hot/Ice)":"Jernih, aromatik, dan elegan.",
+"Cappuccino (Hot/Ice)":"Espresso lembut dengan susu yang seimbang.",
+"Manual Brew V60 – Houseblend":"Aroma houseblend yang dibuka perlahan.",
+"Manual Brew V60 – Arabica":"Wangi, bersih, dan berlapis.",
+"Manual Brew V60 – Arabica Banana":"Manis dengan sentuhan fruity.",
+"Joshua":"Segar, ringan, dan ceria.",
+"Nutrisari":"Manis, segar, dan ringan.",
+"Fresh Milk":"Lembut dan creamy.",
+"Cokelat":"Manis, pekat, dan lembut.",
+"Teh":"Ringan dan menenangkan.",
+"Indomie":"Hangat, gurih, dan akrab.",
+"Indomie Plus Telur":"Gurih dengan tambahan telur."
+};
+return t[name]||"Teman sederhana untuk menemani jeda.";
+}
+function icon(cat){return cat==="coffee"?'<svg viewBox="0 0 24 24"><path d="M4 8h13v6.2A4.8 4.8 0 0 1 12.2 19H8.8A4.8 4.8 0 0 1 4 14.2V8Z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M7 4c0 1 1 1 1 2M11 4c0 1 1 1 1 2"/></svg>':cat==="noncoffee"?'<svg viewBox="0 0 24 24"><path d="M6 5h12l-1 14H7L6 5Z"/><path d="M9 3h6M8 9h8"/><path d="M18 8h1a2 2 0 0 1 0 4h-1"/></svg>':'<svg viewBox="0 0 24 24"><path d="M4 10h16v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-4Z"/><path d="M6 10a6 6 0 0 1 12 0"/><path d="M8 6l-1-2M12 5V2M16 6l1-2"/></svg>'}
+function render(){sections.innerHTML=cats.map((c,ci)=>{let list=menu.filter(x=>x.cat===c[0]);return `<section class="section"><button class="category-btn" onclick="toggleCategory(${ci})"><span class="category-icon">${icon(c[0])}</span><span class="category-title">${c[1]}</span><span class="category-count">${list.length} pilihan</span><span class="chevron">⌄</span></button><div class="cards" id="cat-${ci}">${list.map(x=>`<article class="card" onclick="openDetail(${menu.indexOf(x)})"><div class="menu-icon">${icon(x.cat)}</div><div class="content"><div class="name">${esc(x.name)}</div><div class="desc">${esc(teaser(x.name,x.cat))}</div></div><div class="bottom"><span class="price">${money(x.price)}</span></div></article>`).join("")}</div></section>`}).join("");toggleCategory(0)}
+function toggleCategory(i){const cards=document.querySelectorAll(".cards"),buttons=document.querySelectorAll(".category-btn");cards.forEach((el,n)=>el.classList.toggle("open",n===i&& !el.classList.contains("open")));buttons.forEach((el,n)=>el.classList.toggle("open",n===i&&document.getElementById(`cat-${i}`).classList.contains("open")))}
+function openDetail(i){
+ const x=menu[i], catName={coffee:"Coffee",noncoffee:"Non-Coffee",food:"Food"}[x.cat]||x.cat;
+ detailIcon.innerHTML=icon(x.cat);
+ detailCat.textContent=catName;
+ detailTitle.textContent=x.name;
+ detailCopy.textContent=desc(x.name,x.cat);
+ detailPrice.textContent=money(x.price);
+ detailModal.classList.add("open");
+}
+function closeDetail(){detailModal.classList.remove("open")}
+function openAdmin(){adminModal.classList.add("open")}function closeAdmin(){adminModal.classList.remove("open")}function login(){if(u.value==="user"&&p.value==="120722"){loginView.style.display="none";adminView.style.display="block";renderAdmin()}else err.style.display="block"}function logout(){loginView.style.display="block";adminView.style.display="none";p.value=""}
+function addMenu(){let name=n.value.trim(),cat=c.value,price=Number(pr.value);if(!name||!price)return alert("Nama dan harga wajib diisi.");custom.push({name,price,cat});localStorage.setItem("kopiSukunMenu",JSON.stringify(custom));menu=[...defaults,...custom];n.value="";pr.value="";render();renderAdmin()}
+function removeMenu(i){if(!confirm("Hapus menu ini?"))return;custom.splice(i,1);localStorage.setItem("kopiSukunMenu",JSON.stringify(custom));menu=[...defaults,...custom];render();renderAdmin()}
+function renderAdmin(){adminList.innerHTML=custom.length?custom.map((x,i)=>`<div class="admin-row"><span>${esc(x.name)}<br><small>${x.cat} · ${money(x.price)}</small></span><button class="delete" onclick="removeMenu(${i})">Hapus</button></div>`).join(""):"<div style='font-size:11px;color:#78837e'>Belum ada menu tambahan.</div>"}
+render();
+
+function toggleMore(){
+  document.getElementById("moreMenu").classList.toggle("open");
+}
+function closeMore(){
+  document.getElementById("moreMenu").classList.remove("open");
+}
+document.addEventListener("click",function(e){
+  const m=document.getElementById("moreMenu"), b=document.querySelector(".more-btn");
+  if(m && b && !m.contains(e.target) && !b.contains(e.target)) m.classList.remove("open");
+});
+</script>
+<footer><div class="foot">
+<div><b>Kopi Sukun</b><br><small>16.00 — 24.00 WIB · <a href="https://www.instagram.com/kopisukun.id/" target="_blank" rel="noopener">@kopisukun.id</a></small></div>
+<a href="https://maps.app.goo.gl/7WnWJxys4PAHNC9h8" target="_blank" rel="noopener">⌖ Lokasi kedai</a>
+</div></footer>
+<script>
+/*
+  GitHub publishing:
+  Admin changes should be sent to a secure backend endpoint (/api/publish-menu).
+  Never put a GitHub token in this HTML/JavaScript.
+  The backend can commit the generated menu data to the GitHub Pages repository.
+*/
+</script>
+
+<script>
+/*
+ KOPI SUKUN ADMIN SECURITY
+ The current static GitHub Pages build must NOT contain a GitHub token or
+ treat client-side username/password as real security. localStorage changes
+ are browser-local only and can be bypassed by anyone with DevTools access.
+
+ Production flow:
+ Admin UI -> POST /api/admin/login -> server-side session
+ Admin UI -> POST /api/menu -> backend validates session
+ Backend -> GitHub App / server-side secret -> commits menu JSON
+ GitHub Pages -> deploys the new menu
+*/
+</script>
+
+</body></html>
