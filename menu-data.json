@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "menus": [
+    {"name":"Kopi Tubruk","price":6000,"cat":"coffee","visible":true},
+    {"name":"Kopi Susu Tubruk","price":8000,"cat":"coffee","visible":true},
+    {"name":"Icepresso Robusta","price":10000,"cat":"coffee","visible":true},
+    {"name":"Icepresso Arabica","price":12000,"cat":"coffee","visible":true},
+    {"name":"Long Black Robusta (Hot/Ice)","price":10000,"cat":"coffee","visible":true},
+    {"name":"Long Black Arabica (Hot/Ice)","price":12000,"cat":"coffee","visible":true},
+    {"name":"Cappuccino (Hot/Ice)","price":16000,"cat":"coffee","visible":true},
+    {"name":"Manual Brew V60 – Houseblend","price":15000,"cat":"coffee","visible":true},
+    {"name":"Manual Brew V60 – Arabica","price":17000,"cat":"coffee","visible":true},
+    {"name":"Manual Brew V60 – Arabica Banana","price":18000,"cat":"coffee","visible":true},
+    {"name":"Joshua","price":8000,"cat":"noncoffee","visible":true},
+    {"name":"Nutrisari","price":8000,"cat":"noncoffee","visible":true},
+    {"name":"Fresh Milk","price":10000,"cat":"noncoffee","visible":true},
+    {"name":"Cokelat","price":12000,"cat":"noncoffee","visible":true},
+    {"name":"Teh","price":5000,"cat":"noncoffee","visible":true},
+    {"name":"Indomie","price":8000,"cat":"food","visible":true},
+    {"name":"Indomie Plus Telur","price":10000,"cat":"food","visible":true}
+  ]
+}
